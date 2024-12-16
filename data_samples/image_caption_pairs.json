@@ -1,0 +1,362 @@
+[
+    {
+        "images": [
+            "Serrano-Spinach-Stuffed-Tomatoes-410x316.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Generate a name, ingredients, and cooking steps for the food shown in this image.",
+                "role": "user"
+            },
+            {
+                "content": "The dish in this image is called Serrano Creamed Spinach Stuffed Tomatoes. To recreate it, use the following ingredients: - 1 package Frozen Chopped Spinach (10 Oz Size) - 3 whole Serrano Peppers, Stems Removed And Chopped - 3 ounces, weight Cream Cheese - 2 Tablespoons Milk - 1/4 cups Shredded Parmesan Cheese Plus Extra For Topping - 1 teaspoon Salt - 1 teaspoon Ground Black Pepper - 1 teaspoon Garlic Powder - 4 whole Tomatoes\n\nStep-by-step instructions:\n(I) Cook spinach according to package directions then drain and squeeze out excess water.\n(II) Preheat broiler.\n(III) Place spinach and all remaining ingredients (except the tomatoes) in a saucepan pan and heat over medium to medium low heat, stirring occasionally. Cook until heated through and cheese is bubbling.\n(IV) While spinach is cooking, cut the tops off the tomatoes and using a spoon, scoop on the seeds and some of the inside of the tomatoes.\n(V) Preheat your broiler. Put the tomatoes into a baking dish. Stuff tomatoes with spinach and sprinkle with more Parmesan cheese.\n(VI) Place tomatoes under the broiler until cheese starts to melt, approximately 3 to 5 minutes. Keep a close eye on the food under broiler, that can burn food really quickly.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__20120513-206173-spicy-brown-mustard-step-2-37f1f2516f214b6dbae208bbeef10380.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>I need a food recipe for this appetizing dish:",
+                "role": "user"
+            },
+            {
+                "content": "To prepare Rye And Brown Sugar Mustard Recipe, first gather these ingredients:\n A). 1/2 cup yellow mustard seeds\n B). 1/4 cup brown mustard seeds\n C). 1/2 cup water\n D). 1/2 cup rye whiskey\n E). 1/3 cup cider vinegar\n F). 1/2 cup dark brown sugar\n G). 1/2 teaspoon turmeric\n H). 1 teaspoon Kosher salt\n\nThen follow the steps below: (A). Place mustard seeds, water, vinegar, and rye whiskey in a small bowl. Cover and let soak at room temperature overnight. (B). Transfer mustard seed mixture to jar of blender. Add in sugar, turmeric, and salt. Process until smooth. Transfer to an airtight container and let rest in refrigerator for 1 to 2 days before use.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "picJbKQVD.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Generate a creative name along with the ingredients and cooking steps for this dish:",
+                "role": "user"
+            },
+            {
+                "content": "Dish name: Low Fat Oat Bread\n\nThe ingredients for this dish are: *2 cups flour *2 cups oats (I like the standard oat) *2 tablespoons gluten *2 tablespoons wheat germ *14 ounce yeast *14 teaspoon salt *2 tablespoons oil *2 tablespoons honey *2 tablespoons dark molasses *1 14 cups warm water\n\nAnd the preparation steps are:\n * Add all ingredients to bread maker.\n * Let the bread maker do the hard work but remove the dough before the heating cycle starts.\n * Put the dough in a floured bowl and let rise once to about double the size and punch down.\n * Put dough in bread pan and let it rise again in a warm place.\n * (I let mine rise in the microwave).\n * When it rises above the sides of the pan, put in preheated conventional oven for 30 minutes at 350 degrees.\n * Remove from the pan within 5 minutes after it comes out of the oven.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "Small-Plates-No-Boil-Baked-Pasta-inset-in-pot-11012019.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Predict the name, ingredients, and cooking instructions for this delicious food:",
+                "role": "user"
+            },
+            {
+                "content": "See Family Style Risotto- 6 Servings  above? Here's how to make it: a. Heat 8 cups low sodium chicken broth in a saucepan; bring to simmer and keep hot. b.  c. Melt butter and oil in large nonstick skillet,medium heat. Add rice, minced onion, pepper, stir with non-metal spoon ntil onion is transparent. Add wine. d.  e. Add smashed garlic clove. Reduce heat,then add 1 1/2 cups hot broth, stir for 2 minutes. f.  g. Watch for \"mostly absorbed liquid\",then repeat adding broth until all is used and rice has expanded. Do not rush this. Patience will reward you. h.  i. Add the minced parsley and peas, continue stirring gently. j. Add the butter and grated cheese,stir to combine until risotto has become creamy. k.  l. Remove garlic clove. Taste for seasoning and tenderness. Serve within 5 minutes as side dish.\n\nBut first, gather these ingredients: -8 cups hot chicken broth -[I use Swanson's -low sodium] -3 tablespoons butter -3 tablespoons olive oil -[I use Bertolli] -1 cup Arborio or short-grain rice. Do not use parboiled rice. -1/2 cup dry white wine -freshly ground black pepper -3 grinds nutmeg -[do not use powdered nutmeg] -1/2 cup minced onion -1 fresh garlic clove-smashed -[remove before serving] -1 cup frozen baby peas -2 tablespoons butter -1/3 cup parmesan-romano cheese -[from Deli or grate your own] -1/2 cup minced Italian parsley -[do not use dried parsley] -4 leaves fresh sweet basil,chiffonade,added at last moment before serving. -Special Risotto: 10 large shrimp, peeled and deveined,added 8 minutes before serving, plus 1/8 teaspoon cayenne.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "5241179-01bbc4f291a3480c8e04c0616a000011.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Generate a creative name along with the ingredients and cooking steps for this dish:",
+                "role": "user"
+            },
+            {
+                "content": "This is an image of Oven-Baked Salmon With Herbs. Start with these ingredients: *1 cup chopped fresh dill *3 tablespoons olive oil *1 lemon, juiced *1 tablespoon honey *2 cloves garlic, finely minced, or more to taste *1 teaspoon ground coriander *salt and ground black pepper to taste *1 (2.5 pound) boneless salmon fillet\n\nThen proceed with the instructions:\n -- Combine dill, olive oil, lemon juice, honey, garlic, coriander, salt, and pepper in a small bowl.\n -- Rinse salmon fillet under running cold water and pat dry with paper towels. Lay salmon skin-side down on a large piece of plastic wrap. Spread dill mixture all over the top of the fish, wrap well with plastic wrap, and refrigerate for 30 minutes.\n -- Preheat the oven to 425 degrees F (220 degrees C). Unwrap salmon and place skin-side down in a baking dish.\n -- Bake in the preheated oven until salmon flakes easily with a fork, 12 to 15 minutes.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "pumpkinspice-cake-FG2-410x273.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Generate a recipe for this delicious food.",
+                "role": "user"
+            },
+            {
+                "content": "In the picture, you see Pumpkin Spice Cake With Pumpkin Cream Cheese Frosting. These are the steps to cook it:\n[1]. Preheat oven to 350 F. Lightly spray an 8x8 inch square pan with cooking spray. Set aside.\n[2]. In a medium bowl, whisk together flour, baking powder, baking soda, pumpkin pie spice, and salt. Set aside.\n[3]. In a large bowl, combine the pumpkin, brown sugar, vegetable oil, eggs, and yogurt. Mix until combined. Add the flour mixture into the pumpkin mixture and stir just until combined.\n[4]. Pour batter into prepared pan. Bake for 22-25 minutes or until cake is golden brown and a toothpick inserted in the middle comes out clean. Remove from oven and allow cake to cool.\n[5]. As cake is cooling, prepare frosting. In a large bowl, beat cream cheese and powdered sugar on low speed with an electric mixer until mixture is smooth. Beat in pumpkin and pumpkin pie spice until combined. Refrigerate until ready to use or frost cake once cool. Enjoy!\n\nAnd the ingredients are:\n[1]. FOR THE CAKE:\n[2]. 1-1/2 cup All-purpose Flour\n[3]. 1 teaspoon Baking Powder\n[4]. 1 teaspoon Baking Soda\n[5]. 2 teaspoons Pumpkin Pie Spice\n[6]. 1/4 teaspoons Salt\n[7]. 3/4 cups Canned Pumpkin Puree\n[8]. 3/4 cups Brown Sugar, Firmly Packed\n[9]. 1/2 cups Vegetable Oil\n[10]. 2 Eggs\n[11]. 1/4 cups Non-fat Plain Greek Yogurt\n[12]. FOR THE FROSTING:\n[13]. 1 package (8 Oz. Size) Cream Cheese, Softened\n[14]. 1/2 cups Powdered Sugar\n[15]. 2 Tablespoons Canned Pumpkin Puree\n[16]. 1/2 teaspoons Pumpkin Pie Spice",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "tuna9-410x274.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Generate a name, ingredients list, and cooking instructions for this delicious food.",
+                "role": "user"
+            },
+            {
+                "content": "Introducing Pan Seared Tuna!\n\nTo cook this, gather the following ingredients:\n * 2 Tablespoons Low Sodium Soy Sauce\n * 1 Tablespoon Ginger Paste\n * 1 Tablespoon Fresh Squeezed Lime Juice\n * 4 whole Green Onions, Chopped\n * 2 whole Sashimi Grade Tuna Steaks\n\nThen, follow these steps:\n[a]. In a small bowl mix the soy, ginger, lime and green onions.\n[b]. Place the tuna steaks in a ziplock or plastic container with a lid.\n[c]. Pour the mixture over the tuna steaks and make sure all sides are coated.\n[d]. Seal and put in the fridge for 30 minutes, flipping over halfway through.\n[e]. Heat a medium nonstick pan over high heat and spray with cooking spray.\n[f]. You want to make sure the pan is nice and HOT.\n[g]. Place the tuna steaks on the hot pan and cook for 60 seconds, turn over and cook for an additional 60 seconds.\n[h]. Remove from pan and serve with your favorite salad.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "tWEWzgEySPijBjppP0bw-IMG_20140420_121943178.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Create a name, list of ingredients, and step-by-step instructions for preparing this enticing dish:",
+                "role": "user"
+            },
+            {
+                "content": "Here is the dish Yummy Stuffed French Toast. Follow these steps to make it:\n[I] Tear or cut bread into bite sized pieces.\n[II] Mix all remaining ingredients except the cream cheese together and pour over the bread.\n[III] Stuff randomly with chunks of the cream cheese.\n[IV] Refrigerate overnight and bake at 350* for 45-60 minutes.\n[V] Dust with powdered sugar and serve with assorted warm syrups.\n\nBut first, gather the ingredients:\n(i) 1 loaf French bread\n(ii) 2 cups milk\n(iii) 1 dozen egg\n(iv) 4 tablespoons sugar\n(v) 12 teaspoon cinnamon\n(vi) 1 tablespoon vanilla extract\n(vii) 8 ounces cream cheese\n(viii) powdered sugar\n(ix) syrup",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "942578-80eff85811684394bc64592dee071d56.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>I'm curious! What's the name, ingredients, and cooking method for this mouth-watering creation?",
+                "role": "user"
+            },
+            {
+                "content": "You are looking at Broccoli Rabe With Roasted Peppers. Here's what you need to prepare it: (i). 1 bunch broccoli rabe, trimmed (ii). 3 tablespoons extra-virgin olive oil (iii). 5 cloves garlic, sliced (iv). 2 roasted red peppers, drained and chopped (v). 1 tablespoon fresh lemon juice (vi). 2 tablespoons grated Parmesan cheese\n\nFollow these steps: (A). Bring a large pot of lightly salted water to a boil. Add the broccoli rabe, and cook uncovered until the stems are tender, about 5 minutes. Drain in a colander. (B). Heat the olive oil in a large skillet over medium heat. Stir in the garlic, and cook until tender, about 1 minute. Add the broccoli rabe. Cook and stir until the broccoli rabe has been cooked to your desired degree of tenderness, about 5 minutes for soft. Stir in the roasted peppers until heated, then remove the skillet from the heat, and stir in the lemon juice. Sprinkle with Parmesan cheese to serve.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "picCYxfUw.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Create a recipe title, list of ingredients, and cooking instructions for the food given in the image.",
+                "role": "user"
+            },
+            {
+                "content": "Here\u2019s a dish called Lettuce Soup With Radish Salsa. The steps to make it are as follows:\n + Puree all soup ingredients, except salt and pepper, in a blender until smooth.\n + Season to taste.\n + Refrigerate in a covered container until chilled, at least 3 hours, before serving.\n + Taste and adjust seasoning before serving.\n + Meanwhile, to make the salsa, whisk together olive oil, vinegar, sugar, mustard powder, salt, and pepper in a small bowl.\n + Stir in the radish and cucumber strips.\n + Refrigerate in a covered container.\n + Serve soup in shallow bowls with a mound of the salsa spooned atop each serving.\n\nBefore you start, gather these ingredients:\n* 4 cups butter lettuce leaves, torn\n* 2 cups baby spinach leaves, steamed and torn\n* 1 cup fresh flat-leaf parsley sprig\n* 1 large shallot, coarsely chopped (do not use dehydrated here)\n* 34 cup plain yogurt\n* 2 tablespoons fresh lemon juice\n* 2 cups prepared vegetable stock (I use vegan, organic stock)\n* salt\n* fresh ground pepper\n* 1 tablespoon extra virgin olive oil\n* 1 tablespoon red wine vinegar\n* 12 teaspoon sugar\n* 18 teaspoon mustard powder\n* 12 cup red radish, cut into 1- x 1/8-inch matchstick strips\n* 14 cup seeded cucumber, cut into 1- x-1/8 inch matchstick strips",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "4484931-a3606015e6614481afc6a433fe49387d.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Generate a name, ingredients, and cooking instructions for this dish:",
+                "role": "user"
+            },
+            {
+                "content": "This dish is called Teddy Bear Juice. First, check the ingredients: + 1/2 cup apple juice + 1/2 cup hot water + 1 teaspoon lemon juice + 1 teaspoon honey\n\nThen follow these instructions: (I) Mix apple juice, hot water, lemon juice, and honey in a mug; stir. Serve warm.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "214320-6696759ae28745f696a6830cb67c954d.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Can you generate name for this dish, along with the ingredients and cooking steps?",
+                "role": "user"
+            },
+            {
+                "content": "This image shows Chicken With Buttery Lemon Cream Sauce. To make it, follow these steps:\n - Place chicken breasts in a oven proof baking dish. Squeeze the juice of one lemon over the chicken, and season with lemon pepper, Italian seasoning, and salt and pepper. Cover with plastic wrap, and marinate in the refrigerator for 2 hours or overnight.\n - Preheat an oven to 350 degrees F (175 degrees C).\n - Melt butter in large saucepan over medium-high heat. Add onions and white wine; cook and stir until the onions are soft. Lower the heat to medium; whisk in the flour. Gradually whisk heavy cream into the flour mixture. Stir in the milk and remaining lemon juice. Pour the cream sauce directly over the chicken breasts in the baking dish.\n - Cover baking dish with aluminum foil. Cook the chicken breasts until no longer pink in the center and the juices run clear, about 30 to 40 minutes. An instant-read thermometer inserted into the center of a chicken piece should read at least 165 degrees F (74 degrees C).\n\nThe ingredients are: I. Marinade: II. 4 skinless, boneless chicken breast halves III. 1 lemon, juiced IV. 2 teaspoons lemon pepper V. 2 teaspoons Italian seasoning VI. salt and pepper VII. Lemon Cream Sauce: VIII. 1/2 cup butter IX. 1/2 large yellow onion, minced X. 1/4 cup white wine XI. 2 tablespoons all-purpose flour XII. 1 cup heavy cream XIII. 1 cup milk XIV. 1 lemon, juiced",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "51178860_creamy-slaw_1x1.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Can you predict the recipe for this food?",
+                "role": "user"
+            },
+            {
+                "content": "Here\u2019s Broccoli Almondine ! Get these ingredients ready: a). 1 1/2 pounds broccoli, stems peeled, then head cut into 2-inch-wide spears b). 1/2 stick unsalted butter c). 1/3 cup sliced almonds d). 1 tablespoon fresh lemon juice\n\nThen follow the instructions: -Cook broccoli in a steamer rack over boiling water in a large wide pot, covered, until stems are just tender when pierced with a knife, 8 to 12 minutes. Remove steamer from pot and discard cooking water. Cool broccoli 5 minutes. -Meanwhile, heat butter in pot over medium heat until foam subsides, then cook almonds, stirring, until butter and nuts are golden and have a nutty aroma, 2 to 3 minutes. Stir in lemon juice and 1/2 teaspoon salt. Add broccoli and toss.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "970916-518557352d32499fb9d66ba00cc35963.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Provide a name, ingredients, and detailed cooking process for this delectable food:",
+                "role": "user"
+            },
+            {
+                "content": "The name of this dish is Marshmallow Creme Fruit Dip. Here's what you need to cook it:\n (A). 8 ounces cream cheese, softened\n (B). 1 (7 ounce) jar marshmallow creme\n (C). 1 tablespoon orange juice concentrate\n (D). 1/2 teaspoon ground nutmeg\n\nFollow these steps:\n[A]. Stir cream cheese, marshmallow creme, orange juice concentrate, and nutmeg together in a bowl until completely combined.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "garlicky-green-beans1-410x329.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Generate a name, ingredients, and cooking instructions for the food shown in this image.",
+                "role": "user"
+            },
+            {
+                "content": "Garlicky Green Beans In Olive Oil can be prepared using the following ingredients: 1). 12 ounces, weight Fresh Or Frozen Green Beans 2). 2 Tablespoons Olive Oil 3). 2 cloves Garlic, Minced 4). 1 pinch Kosher Salt And Freshly Ground Black Pepper\n\nTo cook it, follow these steps:\n[A]. Microwave or steam green beans according to package directions; drain. Meanwhile, in a large skillet, heat olive oil over medium heat. Add garlic, reduce heat and saute about 30 seconds.\n[B]. Add green beans and toss to coat. Season with kosher or sea salt and freshly ground black pepper and serve.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "34393_1719273861489_1227549162_31979863_8203919_n-410x307.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Invent a name, ingredients, and detailed steps for this delicious food.",
+                "role": "user"
+            },
+            {
+                "content": "Cranberry Orange Nut Bars is shown above. Follow these steps to prepare it: (a). Whisk flour, baking powder, baking soda and salt in a large bowl. Stir in walnuts and dried cranberries. (b). Whisk 1 cup sugar, applesauce, oil, orange zest and juice in a medium bowl until smooth. Make a well in the dry ingredients and pour in the wet ingredients. Mix until well blended. Chill in the refrigerator for 30 minutes. (c). Preheat oven to 350\u00b0F. Spray a 9\"x13\" pan with nonstick cooking spray (I prefer the kind with flour in it). (d). Remove dough from the refrigerator and press firmly into the pan. Dough will be very sticky; use a piece of parchment or waxed paper to press it down evenly. (e). Sprinkle the remaining 2 tablespoons sugar evenly over the top of the pressed dough. (f). Bake the bars until lightly golden brown, approximately 25 minutes. Cool completely in the pan before cutting into 15 servings.\n\nBut first, the ingredients:\n- 1-1/2 cup Whole Wheat Flour\n- 1 teaspoon Baking Powder\n- 1 teaspoon Baking Soda\n- 1/2 teaspoons Salt\n- 1 cup Walnuts, Chopped\n- 1/2 cups Dried Cranberries, Chopped\n- 1 cup Sugar Plus 2 Tablespoons To Sprinkle On Top\n- 1/2 cups Smooth, Unsweetened Applesauce\n- 1/4 cups Canola Oil\n- 1 Tablespoon Freshly Grated Orange Zest\n- 3 Tablespoons Orange Juice",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "Pumpkin-Waffles-with-Bacon-Maple-Butter-by-Gerry-Speirs-410x273.jpeg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Create a name, list of ingredients, and step-by-step instructions for preparing this enticing dish:",
+                "role": "user"
+            },
+            {
+                "content": "Here is the dish Pumpkin Waffles With Bacon Maple Butter. Follow these steps to make it: (1). For The Bacon Maple Butter: (2). In a stand up mixer, beat the butter and chopped bacon until combined. Add the syrup and mix well. Transfer to a small dish and keep in the fridge until ready to use. (3). For The Pumpkin Waffles: (4). Preheat the waffle iron according to manufacturer's instructions. (5). In a medium-sized bowl sift together the flour, sugar, baking powder, baking soda and spices. (6). Whisk the eggs in a large bowl. Add the milk, buttermilk, pumpkin and butter. Whisk until smooth and well blended. Whisk in the dry ingredients until just smooth. Make sure that you don't over-work it. (7). Brush the waffle iron with canola oil or non-stick spray. Pour enough batter onto the waffle plate and spread to fill the space. Close the waffle maker and bake until golden and firm. (8). It's a good idea to keep a tray in a warm (250 F) oven and transfer the cooked waffles to it while you repeat with the remaining batter. (9). Serve waffles warm with a scoop of bacon butter on top and drizzled with extra maple syrup. (10). Recipe for Pumpkin Waffles with Bacon Maple Butter adapted from Epicurious.\n\nBut first, gather the ingredients:\n(i) FOR THE BACON MAPLE BUTTER:\n(ii) 2 sticks Unsalted Butter, At Room Temperature\n(iii) 8 slices Well Done Bacon, Chopped Finely\n(iv) 3 Tablespoons Maple Syrup\n(v) FOR THE PUMPKIN WAFFLES:\n(vi) 2-1/2 cups All-purpose Flour\n(vii) 1/3 cups Light Brown Sugar\n(viii) 2-1/4 teaspoons Baking Powder\n(ix) 1 teaspoon Baking Soda\n(x) 1/2 teaspoons Salt\n(xi) 2 teaspoons Ground Cinnamon\n(xii) 1 teaspoon Ground Ginger\n(xiii) 1 teaspoon Ground Cloves\n(xiv) 4 Eggs\n(xv) 1 cup Whole Milk\n(xvi) 1 cup Buttermilk\n(xvii) 1 cup Canned Pumpkin\n(xviii) 6 Tablespoons Melted Butter",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "classic-beef-stew-dutch-oven-recipe-FT-BLOG1019-c50074af5c1e4c3e865bf0a4d2c36266.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Can you generate name for this dish, along with the ingredients and cooking steps?",
+                "role": "user"
+            },
+            {
+                "content": "Dish: Beef Daube with Wild Mushrooms\n\nFollow these instructions to make it:\nI. Preheat the oven to 325.\nII. In a heatproof bowl, soak the dried porcini in the 1 cup of boiling water until softened, about 20 minutes.\nIII. Rub the mushrooms together to loosen any grit, then remove them from the water and coarsely chop.\nIV. Let the soaking liquid stand for 5 minutes to settle, then pour it into a clean bowl, leaving any grit behind.\nV. Heat the olive oil in a medium enameled cast-iron casserole.\nVI. Add one-third of the meat at a time, season with salt and brown well on all sides over moderate heat, about 6 minutes; transfer to a plate.\nVII. Repeat with the remaining meat.\nVIII. Add the carrots and onions to the casserole and cook, stirring, until lightly browned, about 10 minutes.\nIX. Discard any fat in the casserole.\nX. Sprinkle the flour over the vegetables and cook until it browns lightly, about 3 minutes.\nXI. Gradually stir in the wine and the 2 cups of water, scraping up the browned pan juices.\nXII. Return the meat to the casserole.\nXIII. Add the tomato paste, bay leaves, thyme and the porcini and their soaking liquid.\nXIV. Bring to a boil.\nXV. Cover the casserole tightly and bake for 3 hours, or until the cubes of beef are very tender.\nXVI. Discard the bay leaves and the thyme sprig and skim the fat from the sauce.\nXVII. Season with salt and pepper and serve.\n\nMake sure you have the ingredients ready:\n(i). 1 cup dried porcini mushrooms (1 ounce)\n(ii). 1 cup boiling water, plus 2 cups at room temperature\n(iii). 3 tablespoons olive oil\n(iv). 3 pounds trimmed beef chuck, cut into 2-inch cubes\n(v). Kosher salt\n(vi). 4 medium carrots, thinly sliced\n(vii). 3 medium onions, halved and thinly sliced\n(viii). 2 tablespoons all-purpose flour\n(ix). 2 cups red wine\n(x). 3/4 cup tomato paste\n(xi). 2 bay leaves\n(xii). 1 thyme sprig or 1/2 teaspoon dried thyme\n(xiii). Freshly ground pepper",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "picbgkmgN.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Create a name, list of ingredients, and step-by-step instructions for preparing this enticing dish:",
+                "role": "user"
+            },
+            {
+                "content": "Here is the dish Buffalo Chicken and Black Bean Wrap. Follow these steps to make it:\n (1). Heat chicken and black beans in a medium saucepan.\n (2). Add Buffalo Wing Sauce and heat through.\n (3). Spread 1 tablespoon Ranch dressing on each tortilla.\n (4). Add a small handful of spring salad mix and shredded cheddar cheese.\n (5). Spoon 1/4 cup of chicken and black bean mixture into tortilla.\n (6). Wrap up, burrito style, and serve warm.\n\nBut first, gather the ingredients:\n(i) 2 (12 1/2 ounce) cansswanson premium chunk chicken, drained\n(ii) 1 (16 ounce) canbushs black beans, drained\n(iii) 14 cup buffalo wing sauce, mild\n(iv) 13 cup ranch salad dressing\n(v) 1 cup dole spring mixed salad green\n(vi) 12 cup shredded mild cheddar cheese\n(vii) 8 flour tortillas, warmed",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "picKiyZk5.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Create a recipe title, list of ingredients, and cooking instructions for the food given in the image.",
+                "role": "user"
+            },
+            {
+                "content": "Here\u2019s a dish called Mexican salsa-salad. The steps to make it are as follows: I. Remove and discard husks from the tomatillos; rinse, chop and put into a bowl. II. Rinse and core the tomatoes, chop and add to tomatillos. III. Add onion, cilantro, lime juice, garlic and jalapeno to tomatillo/tomato mixture. IV. Mix gently and add salt to taste. V. Serve with grilled meats, such as fajitas or is good on it's own as a salad.\n\nBefore you start, gather these ingredients:\n* 34 lb fresh tomatillo\n* 34 lb tomatoes\n* 34 cup chopped white onion\n* 12 cup chopped fresh cilantro\n* 3 tablespoons lime juice\n* 2 cloves garlic, minced\n* 1 12-2 tablespoons chopped fresh jalapeno chiles\n* salt",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "0ae1b33f14e0aff353de_300.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Create a recipe for the food given in the image.",
+                "role": "user"
+            },
+            {
+                "content": "This is an image of Christmas Tree Bread. First, gather these ingredients: (A). 1/2 cup butter or margarine (B). 1/2 cup sugar (C). 2 teaspoons salt (D). 2 cups milk scalded (E). 2 each yeast, active dry active dry yeast, envelopes (F). 1/2 cup water warm, (110-115 degrees F) (G). 2 large eggs lightly beaten (H). 8 cups flour, all-purpose unsifted (I). 1 x candied cherries red and green, drained (J). 1 each frosting 3/4 oz tube, white decorator (K). 1 1/2 cup corn syrup, light light (L). 1 1/2 cup candied fruit chopped mixed (M). 1 1/2 cup almonds sliced (N). 1/2 cup corn syrup, light light (O). 1/2 cup apricot preserves (jam)\n\nThen follow these instructions:In large bowl with mixer at medium speed, beat margarine, sugar and salt.\nAdd milk, beating until margarine is melted.\nSprinkle yeast over water, stir until dissolved.\nAdd to margarine mixture with eggs.\nWith mixer at low speed add 4 cups of the flour, 1 cup at a time, beating until well mixed.\nStir in remaining flour with wooden spoon.\nOn lightly floured surface knead 8 to 10 minutes or until smooth and elastic.\nPlace dough in greased bowl; turn to grease top.\nCover with towel; let rise in warm place 2 hours or until doubled in bulk.\nPunch down dough; form into ball; cut into quarters.\nSet 2 quarters aside; cover with towel.\nUse reserved quarters to make two Fruit Nut Loaves.\n(Instructions at end of this recipe.)\nOn lightly floured surface roll out one quarter into rectangle 15x12 inches.\nCut into 2 triangles each with a base of 10 inches, a height of 12 inches and 15 inch sides.\nPlace one triangle on large greased cookie sheet.\nReshape into triangle if necessary.\nSpread 1 cup of Fruit Nut Filling over dough on cookie sheet to within 1/2 inch of edge; moisten edges with water.\nPlace second dough triangle over fruit filled one pressing to seal edges.\nRoll out second quarter of dough to 1/2 inch thickness.\nWith 2 1/2 inch doughnut cutter cut 17 circles; remove centers.\nOverlap cut circles on tree triangle.\nRoll out scraps of dough to 1/2 inch thickness; cut one 2 inch square.\nPlace on center of base of triangle to form trunk of tree.\nCut one 3 inch star; place on top of tree.\nCover; allow to rise in warm place 1 hour or until almost doubled in bulk.\nBake in 350F (180C) oven 35 minutes or until golden brown.\nRemove from oven.\nPlace cherries in center of circles.\nWhile warm, brush lightly with glaze.\nDecorate tree with decorator frosting.\nMakes one tree and 2 loaves.\nFruit-Nut Filling: In small saucepan stir together all ingredients.\nStirring constantly, bring to boil over medium heat and boil 1 minute.\nCool.\nApricot Glaze: In small saucepan stir together the corn syrup and preserves.\nStirring constantly, bring to boil over medium heat and boil 1 minute.\nFruit Nut Loaves: Grease two 2 1/2 x 2 1/2 x 3-inch loaf pans.\nRoll out each quarter of reserved dough into 15 by 9-inch rectangle.\nSpread 1 cup of Fruit Nut Filling over each rectangle of dough to within 1/2 inch of edge, roll each rectangle up from short side.\nPress ends to seal; fold ends under; place seam side down into prepared pan.\nCover; let rise about 1 hour or until doubled.\nBake in 350F (180C) oven 40 to 45 minutes or until bread sounds hollow when tapped.\nRemove from oven.\nWhile still warm, brush with Apricot Glaze.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "picIfFx2r.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Invent a name, ingredients, and detailed steps for this delicious food.",
+                "role": "user"
+            },
+            {
+                "content": "This image shows Pear, Celeriac and Stilton Soup. Here are the ingredients:\nA). 1 12 lbs pears, peeled and cored\nB). 2 tablespoons sunflower oil\nC). 1 onion, chopped\nD). 1 lb celeriac, peeled and roughly chopped\nE). 2 pints vegetable stock\nF). salt & freshly ground black pepper\nG). 6 -8 ounces vegetarian Stilton cheese, crumbled (optional & omit for vegans*)\nH). 1 ounce single cream or 1 ounce soya cream\nI). chopped chives, to garnish\n\nSteps to prepare:\n1). Cut the pears into slices and poach them in 300ml/1/2 pint water until they are tender.\n2). Blend the pears and water together and reserve.\n3). Heat the oil in a large saucepan and gently fry the onion until transluscent.\n4). Add the celeriac and cook, covered, for 10-15 minutes, or until tender.\n5). Add the vegetable stock and blended pears, bring to the boil and then reduce the heat and simmer for 10 minutes.\n6). Liquidise the soup in a blender and return to a clean pan.\n7). Re-heat gently, season to taste and stir in the crumbled Stilton,* if using.\n8). Serve immediately with a swirl of dairy or soya* cream and a sprinkling of chopped chives.",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "picVapP1X.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Provide a recipe for this delectable food:",
+                "role": "user"
+            },
+            {
+                "content": "Super Soft Chocolate Chip Peanut Butter Cookies can be made with the following ingredients: 1). 1 cup margarine (or butter) 2). 14 cup peanut butter 3). 12 cup brown sugar 4). 12 cup sugar 5). 1 teaspoon vanilla 6). 1 tablespoon rum 7). 2 tablespoons milk 8). 1 cup chocolate chips 9). 1 13 cups flour 10). 1 teaspoon baking powder\n\nAnd here\u2019s how to make it:\nI. Mix margarine (or butter) with the peanut butter.\nII. Add the sugars, vanilla,rum and milk and mix thoroughly until well blended.\nIII. Stir in chocolate chips.\nIV. Mix flour with baking powder (If using unsalted butter, also add about 1/2 tsp salt).\nV. Add flour mix to the wet ingredients and stir just until all the flour is incorporated.\nVI. OPTIONAL: Throw in the freezer for 20-30 minutes.\nVII. The dough will be easier to work with afterwards.\nVIII. Drop by spoonful onto greased baking sheet.\nIX. Press down to flatten.\nX. Bake at 375 for 8 minutes.\nXI. Don't overbake!",
+                "role": "assistant"
+            }
+        ]
+    },
+    {
+        "images": [
+            "Chocolate-Covered-Strawberry-Cheesecake_WD0156-S-29da911d0e1a414b9e1e7b2c800f6bde.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>Can you predict the name, ingredients, and cooking instructions for this food?",
+                "role": "user"
+            },
+            {
+                "content": "This is a recipe for Strawberry Swirl Cream Cheese Pound Cake. Ingredients required: [-] 1 1/2 cups butter, softened [-] 3 cups sugar [-] 1 (8-oz.) package cream cheese, softened [-] 6 large eggs [-] 3 cups all-purpose flour [-] 1 teaspoon almond extract [-] 1/2 teaspoon vanilla extract [-] 2/3 cup strawberry glaze [-] 1 (6-inch) wooden skewer\n\nInstructions: [i] Preheat oven to 350\u00b0. Beat butter at medium speed with a heavy-duty electric stand mixer until creamy. Gradually add sugar, beating at medium speed until light and fluffy. Add cream cheese, beating until creamy. Add eggs, 1 at a time, beating just until blended after each addition. [ii] Gradually add flour to butter mixture. Beat at low speed just until blended after each addition, stopping to scrape bowl as needed. Stir in almond and vanilla extracts. Pour one-third of batter into a greased and floured 10-inch (14-cup) tube pan (about 2 2/3 cups batter). Dollop 8 rounded teaspoonfuls strawberry glaze over batter, and swirl with wooden skewer. Repeat procedure once, and top with remaining third of batter. [iii] Bake at 350\u00b0 for 1 hour to 1 hour and 10 minutes or until a long wooden pick inserted in center comes out clean. Cool in pan on a wire rack 10 to 15 minutes; remove from pan to wire rack, and cool completely (about 1 hour). [iv] Note: We tested with Marzetti Glaze for Strawberries.",
+                "role": "assistant"
+            }
+        ]
+    }
+]
