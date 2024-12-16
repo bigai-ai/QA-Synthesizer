@@ -13,6 +13,8 @@ from utils.llava_med.evaluate_metrics import calculate_f1score
 from utils.llava_med.glossary import normalize_word
 from utils.conversation import conv_templates
 
+sys.path.append("../")
+import process.syn_utils as syn_utils
 
 class App:
     def __init__(self):
@@ -75,11 +77,11 @@ class BaseTask(object):
         image_file = entry["image"]
         image_path = os.path.join(self.image_folder, image_file)
         image = Image.open(image_path).convert('RGB') # convert to avoid non-RGB images
-        return image, image_path
+        return image
     
     def get_prompt(self, entry, stop=None, silent=False, processor=None, process_vision_info=None, **kwargs):
         try:
-            image, image_path = self.get_image(entry)
+            image = self.get_image(entry)
         except Exception as e:
             print(e)
             return None
@@ -95,7 +97,7 @@ class BaseTask(object):
         
         elif self.model_type == 'qwen2_vl':
             messages = deepcopy(self.default_qwen2_vl_messages)
-            messages[1]["content"][0]["image"] = image_path
+            messages[1]["content"][0]["image"] = image
             messages[1]["content"][1]["text"] = self.get_raw_question(entry)
 
             prompt = processor.apply_chat_template(
@@ -130,6 +132,153 @@ class BaseTask(object):
         return {"prompt": prompt, "multi_modal_data": {"image": image}}
 
 
+# ================================ Visual Instruction Synthesizer =====================================
+@task_map.add("syn_task_triplet")
+class syn_task_triplet(BaseTask):
+    """synthesize `instruction-informative response-precise response` triplets from image-caption pairs"""
+    def __init__(self, model_type):
+        super().__init__(model_type)
+        assert model_type == 'llava', "we only support llava-based synthesizer now"
+        self.stop_tokens = ["<|end_of_text|>"]
+        self.max_tokens = 512 # max new tokens to generate
+        self.skip_special_tokens = False # do not skip because we need the <eot_id> for extracting qa pairs
+        self.max_model_len = 4096 # 6144 -> 4096, constrain max model len for speed-up
+        self.enable_eval = False
+    
+    def get_dataset(self, data_path, image_folder, **kwargs):
+        """
+        data_path is the path to the image_caption_pairs.json,
+        where each entry is in the `ShareGPT` format:
+        "images": [
+            "image_xxx.jpg"
+        ],
+        "messages": [
+            {
+                "content": "<image>instruction",
+                "role": "user"
+            },
+            {
+                "content": "response",
+                "role": "assistant"
+            }
+        ]
+        """
+        self.image_folder = image_folder 
+        ds = json.load(open(data_path))
+        return ds
+        
+    def get_prompt(self, entry, stop=None, silent=False, **kwargs):
+        image_file = entry["images"][0]
+        try:
+            image = Image.open(os.path.join(self.image_folder, image_file)).convert('RGB')
+        except Exception as e:
+            print(e)
+            return None
+
+        conv = conv_templates[self.conv_mode].copy()
+
+        caption_question = f"{self.image_token}\n{syn_utils.caption_hint}"
+        caption_answer = entry["messages"][1]["content"]
+        conv.append_message(conv.roles[0], caption_question)
+        conv.append_message(conv.roles[1], caption_answer)
+        conv.append_message(conv.roles[0], None)
+
+        prompt = conv.get_prompt()
+
+        if (entry['syn_id'] % 1000 == 0 or stop is not None) and not silent:
+            print(f"[DEBUG INFO] id: {entry['syn_id']}")
+            print(f'entry: {entry}')
+            print(f'image path: {os.path.join(self.image_folder, image_file)}')
+            print(f'prompt: {prompt}')
+            
+        return {"prompt": prompt, "multi_modal_data": {"image": image}}
+    
+    def debug_info(self, metadata_list):
+        for entry in metadata_list:
+            print(f"## image path: {os.path.join(self.image_folder, entry['image'])}")
+            print("caption: " + json.dumps(entry["conversations"][:2], indent=2) + "\n")
+            print("groundtruth: " + json.dumps(entry["conversations"][2:], indent=2) + "\n")
+            print("pred: " + json.dumps(syn_utils.parse_pred(entry["pred"])[0], indent=2) + "\n")
+        return
+
+@task_map.add("consistency_filter")
+class consistency_filter(BaseTask):
+    """Filter synthetic tasks based on response consistency"""
+    def __init__(self, model_type):
+        super().__init__(model_type)
+        assert self.model_type == 'llama', "we use text-only language model for data fitering"
+
+        prompt_path = './utils/consistency_filter_prompt.txt'
+        self.prompt_template = open(prompt_path).read()
+
+        self.max_tokens = 2 # max new tokens to generate
+        self.skip_special_tokens = True
+        self.stop_tokens = ["<|end_of_text|>"]
+        self.max_model_len = 8192
+        self.enable_eval = False
+    
+    def get_dataset(self, data_path, image_folder, stop, **kwargs):
+        self.image_folder = image_folder # Image is not used for inference, but for debugging
+        if stop is not None:
+            data_path = '/tmp/test_syn.jsonl'
+        ds = []
+        with open(data_path, 'r', encoding='utf8') as f:
+            jsonls = f.read().strip().split('\n')
+            for jsonl in tqdm(jsonls):
+                ds.append(json.loads(jsonl))
+        return ds
+
+    def get_prompt(self, entry, stop=None, silent=False, **kwargs):
+        if entry['pred'] is None:
+            return None
+        pred_QAs = syn_utils.parse_pred(entry['pred'])
+
+        precise_QAs = {}
+        informative_QAs = {}
+        precise_hint = f'{syn_utils.precise_hint}\n'
+        informative_hint = f'{syn_utils.informative_hint}\n'
+
+        collected_QA = None
+        for idx in range(len(pred_QAs))[::2]:
+            question = pred_QAs[idx]['value']
+            answer = pred_QAs[idx+1]['value']
+            if question.startswith(precise_hint):
+                precise_q = question[len(precise_hint):]
+                if precise_q in informative_QAs:
+                    collected_QA = {
+                    "Q": precise_q,
+                    "precise_A": answer,
+                    "informative_A": informative_QAs[precise_q]
+                    }
+                    break
+                else:
+                    precise_QAs[precise_q] = answer
+            elif question.startswith(informative_hint):
+                informative_q = question[len(informative_hint):]
+                if informative_q in precise_QAs:
+                    collected_QA = {
+                    "Q": informative_q,
+                    "precise_A": precise_QAs[informative_q],
+                    "informative_A": answer
+                    }
+                    break
+                else:
+                    informative_QAs[informative_q] = answer
+        
+        if collected_QA is None:
+            return None
+
+        prompt = self.prompt_template.format(**collected_QA)
+        entry['collected_QA'] = collected_QA
+
+        # DEBUG INFO
+        if (entry['syn_id'] % 1000 == 0 or stop is not None) and not silent:
+            print(f"### id: {entry['syn_id']}")
+            print("image: ", os.path.join(self.image_folder, entry['images'][0]))
+            cur_prompt = prompt.split('\n\n## Question:')[-1]
+            print(f"testing_prompt: {cur_prompt}")
+        return prompt
+
 # ======================================= Task Evaluation ======================================
 class BaseHFTask(BaseTask):
     """evaluate tasks from huggingface repo of AdaMLLM: https://huggingface.co/AdaptLLM/Adapt-MLLM-to-Domains"""
@@ -141,8 +290,8 @@ class BaseHFTask(BaseTask):
         return ds
 
     def get_image(self, entry):
-        image = entry["image"].convert('RGB') # convert to avoid non-RGB images
-        return image, image # the second `image` is a dummy one
+        image = entry["image"].convert('RGB')
+        return image
 
     def get_raw_question(self, entry, **kwargs):
         return entry['input']

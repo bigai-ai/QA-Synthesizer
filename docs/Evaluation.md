@@ -25,17 +25,8 @@ The dataset loading script is embedded in the inference code, so you can directl
 Our code can directly evaluate models such as LLaVA-v1.6 ([open-source version](https://huggingface.co/Lin-Chen/open-llava-next-llama3-8b)), Qwen2-VL, and Llama-3.2-Vision. To evaluate other MLLMs, refer to [this guide](https://github.com/vllm-project/vllm/blob/main/examples/offline_inference_vision_language.py) for modifying the `BaseTask` class in the [vllm_inference/utils/task.py](../vllm_inference/utils/task.py) file. Feel free to reach out to us for assistance!
 
 ### Setup
-Install vLLM with `pip` or [from source](https://vllm.readthedocs.io/en/latest/getting_started/installation.html#build-from-source).
-
-As recommended in the official vLLM documentation, install vLLM in a **fresh new** conda environment:
-
 ```bash
-conda create -n vllm python=3.10 -y
 conda activate vllm
-pip install vllm  # Ensure vllm>=0.6.2 for compatibility with llama3.2; if llama-3.2 is not used, vllm==0.6.1 is sufficient
-```
-
-```bash
 cd QA-Synthesizer/vllm_inference
 RESULTS_DIR=./eval_results  # Directory for saving evaluation scores
 ```

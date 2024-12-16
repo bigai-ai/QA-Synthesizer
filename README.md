@@ -12,12 +12,22 @@ We investigate domain adaptation of MLLMs through post-training, focusing on dat
 - [2024/12/13] Released the [evaluation guide](docs/Evaluation.md)
 - [2024/11/29] Released our paper.
 
+## Setup
+Install vLLM with `pip` or [from source](https://vllm.readthedocs.io/en/latest/getting_started/installation.html#build-from-source).
+
+As recommended in the official vLLM documentation, install vLLM in a **fresh new** conda environment:
+
+```bash
+conda create -n vllm python=3.10 -y
+conda activate vllm
+pip install vllm  # Ensure vllm>=0.6.2 for compatibility with llama3.2; if llama-3.2 is not used, vllm==0.6.1 is sufficient
+```
+
 ## Domain-Specific Visual Instruction Synthesis
 Todo
 
 ## Domain-Specific Single-Stage Post-Training
-Todo
-
+The steps in [Synthesis.md](docs/Synthesis.md) reproduce our visual instruction synthesizer and our synthetic data.
 
 ## Domain-Specific Task Evaluation
 

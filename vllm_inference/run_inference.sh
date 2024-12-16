@@ -36,7 +36,7 @@ for j in "${!TASK_array[@]}"; do
     echo "TASK: ${TASK}"
     echo "OUTPUT_DIR: ${OUTPUT_DIR}/${TASK}" # save outputs for every single task
     for IDX in $(seq 0 $((CHUNKS-1))); do
-        CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python inference_vlm.py \
+        CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python inference.py \
             --model_weight_path ${CKPT}  \
             --task ${TASK} \
             --cuda_device ${GPULIST[$IDX]} \
@@ -50,11 +50,11 @@ for j in "${!TASK_array[@]}"; do
 
     echo 'inference done'
 
-    python merge_vlm_results.py \
+    python merge_predictions.py \
         --output_dir ${OUTPUT_DIR}/${TASK} \
         ${OTHER_OPT}
 
-    python eval_vlm_synthesizer.py \
+    python eval_predictions.py \
         --output_dir ${OUTPUT_DIR}/${TASK} \
         --model_path ${CKPT} \
         --task_name ${TASK} \

@@ -10,6 +10,7 @@ dist
 
 # Data
 data
+data_samples
 
 # Editor
 .idea

@@ -9,6 +9,8 @@ from transformers import AutoProcessor
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model_weight_path', type=str)
+parser.add_argument('--data_path', type=str, default=None)
+parser.add_argument('--image_folder', type=str, default=None)
 parser.add_argument('--output_dir', type=str)
 parser.add_argument('--stop',type=int, default=None)
 parser.add_argument('--remove_cache', action='store_true', help='remove the cached files')
@@ -30,7 +32,7 @@ print(f'task_cls.max_model_len: {task_cls.max_model_len}')
 
 sampling_params = SamplingParams(temperature=0, max_tokens=task_cls.max_tokens, skip_special_tokens=task_cls.skip_special_tokens, stop=task_cls.stop_tokens)
 
-ds = task_cls.get_dataset()
+ds = task_cls.get_dataset(data_path=args.data_path, image_folder=args.image_folder, stop=args.stop)
 
 processor = None
 process_vision_info = None
