@@ -31,7 +31,7 @@ The steps in [Synthesis.md](docs/Synthesis.md) reproduce our visual instruction 
 
 ## Domain-Specific Task Evaluation
 
-See [Evaluation.md](docs/Evaluation.md) to reproduce our results and evaluate any MLLMs compatible with [vLLM](https://github.com/vllm-project/vllm).
+See [Evaluation.md](docs/Evaluation.md) to reproduce our results and evaluate any MLLMs compatible with vLLM.
 
 
 ## License
