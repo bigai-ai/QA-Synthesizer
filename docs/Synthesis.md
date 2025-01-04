@@ -5,10 +5,36 @@ We fine-tune a unified visual instruction synthesizer that generates diverse tas
 
 The following steps reproduce our visual instruction synthesizer. Alternatively, you can skip these steps and download our synthesizer from [AdaptLLM/visual-instruction-synthesizer](https://huggingface.co/AdaptLLM/visual-instruction-synthesizer).  
 
-Fine-tuning steps:  
-```bash  
-Coming soon...  
-```  
+### Download Seed Data
+
+We combine VisionFLAN and ALLaVA into our required format for fine-tuning the synthesizer.
+
+Download the following data files:
+- VisionFLAN: 
+  * [vflan_metadata.json](https://huggingface.co/datasets/Vision-Flan/vision-flan_191-task_1k/blob/main/metadata.json)
+  * [images_191task_1k](https://huggingface.co/datasets/Vision-Flan/vision-flan_191-task_1k/blob/main/image_191-task_1k.zip)
+- ALLaVA: 
+  * [ALLaVA-Instruct-VFLAN-4V.json](https://huggingface.co/datasets/FreedomIntelligence/ALLaVA-4V/blob/main/allava_vflan/ALLaVA-Instruct-VFLAN-4V.json)
+  * [ALLaVA-Caption-VFLAN-4V.json](https://huggingface.co/datasets/FreedomIntelligence/ALLaVA-4V/blob/main/allava_vflan/ALLaVA-Caption-VFLAN-4V.json)
+
+### Fine-Tune Synthesizer
+
+Using the seed data, we conduct multitask fine-tuning on an open-source MLLM (e.g., LLaVA-v1.6-8B) to generate task triplets based on the corresponding image-caption pairs, and 10% of the images are replaced with a blank image to enhance generalization.
+
+```bash
+conda activate adamllm
+
+CAPTION=PATH_TO/ALLaVA-Caption-VFLAN-4V.json
+PRECISE_A=PATH_TO/vflan_metadata.json
+INFORMATIVE_A=PATH_TO/ALLaVA-Instruct-VFLAN-4V.json
+IAMGE_FOLDER=PATH_TO/images_191task_1k
+
+bash ./scripts/tune_synthesizer.sh ${CAPTION} ${PRECISE_A} ${INFORMATIVE_A} ${IAMGE_FOLDER}
+
+conda deactivate
+```
+
+The tuned synthesizer is saved as `./exp/synthesizer`.
 
 ## 2. Task Synthesis for Target Domain  
 We use the synthesizer to generate task triplets from image-caption pairs in the target domain, followed by consistency-based data filtering to enhance data quality.  

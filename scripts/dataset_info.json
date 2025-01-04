@@ -1,0 +1,30 @@
+{
+    "biomed": {
+      "file_name": "PATH_TO/biomed-visual-instructions/image_caption_and_synthetic_task.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "messages",
+        "images": "images"
+      },
+      "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant"
+      }
+    },
+    "food": {
+      "file_name": "PATH_TO/food-visual-instructions/image_caption_and_synthetic_task.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "messages",
+        "images": "images"
+      },
+      "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant"
+      }
+    }
+}

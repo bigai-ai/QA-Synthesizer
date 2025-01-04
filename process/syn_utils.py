@@ -9,6 +9,7 @@ sys.path.append("./")
 import process.read_compre_pt as rc_pt_utils
 import copy
 import json
+from tqdm import tqdm
 
 def save_json(dic, file_path):
     with open(file_path, "w") as writer:
@@ -151,7 +152,6 @@ def process_entry(id, entry, image_token, train_on_syn_only=False):
     
     return entry
 
-from tqdm import tqdm
 def _load_json_or_jsonl(data_path, list_data_dict, rank=0):
     if rank == 0:
         print(f'loading from data path: {data_path}')
@@ -183,7 +183,7 @@ def format_caption(caption):
                     "value": caption}]
     return conversation
 
-def load_caption(merged_dict, caption_path='./data/allava_vflan/ALLaVA-Caption-VFLAN-4V.json'):
+def load_caption(merged_dict, caption_path):
     caption_data = json.load(open(caption_path))
     for entry in caption_data:
         assert len(entry['conversations']) == 2 and entry['conversations'][1]['from'] == 'gpt', f"invalid caption conversation: {entry['conversations']}"
@@ -196,22 +196,21 @@ def load_caption(merged_dict, caption_path='./data/allava_vflan/ALLaVA-Caption-V
         merged_dict[image]['conversations'] = format_caption(caption)
     return
 
-def load_precise_qa(merged_dict, task_name_only=False, precise_qa_path='./data/allava_vflan/vflan_metadata.json'):
+def load_precise_qa(merged_dict, precise_qa_path):
     precise_qa_data = json.load(open(precise_qa_path))
     for entry in precise_qa_data:
         assert len(entry['conversations']) == 2 and entry['conversations'][1]['from'] == 'gpt', f"invalid precise conversation: {entry['conversations']}"
         image = os.path.basename(entry['image'])
         if image not in merged_dict:
             continue
-        if not task_name_only:
-            if 'precise_qa' in merged_dict[image]:
-                merged_dict[image]['precise_qa'] += entry['conversations']
-            else:
-                merged_dict[image]['precise_qa'] = entry['conversations']
+        if 'precise_qa' in merged_dict[image]:
+            merged_dict[image]['precise_qa'] += entry['conversations']
+        else:
+            merged_dict[image]['precise_qa'] = entry['conversations']
         merged_dict[image]['task_name'] = entry['task_name']
     return
 
-def load_informative_qa(merged_dict, informative_qa_path='./data/allava_vflan/ALLaVA-Instruct-VFLAN-4V.json'):
+def load_informative_qa(merged_dict, informative_qa_path):
     informative_qa_data = json.load(open(informative_qa_path))
     for entry in informative_qa_data:
         assert len(entry['conversations']) == 2 and entry['conversations'][1]['from'] == 'gpt', f"invalid informative conversation: {entry['conversations']}"
@@ -243,24 +242,18 @@ def format_qa(qa, mode):
         conversations.append({'Q': f"{Hint}\n{question}", 'A': answer})
     return conversations
 
-def replace_image_with_blank(id, entry, replace_with_blank_image_percent: int, blank_image_path: str = './assets/Blank.jpg'):
-    """replace 5% of the images to blank image, so to force the synthesizer to learn the maping from text only"""
+def replace_image_with_blank(id, entry, replace_with_blank_image_percent: int, blank_image_path: str):
     assert replace_with_blank_image_percent >= 0 and replace_with_blank_image_percent <= 100
     replace = random.Random(id).choices([True, False], weights=(replace_with_blank_image_percent, 100 - replace_with_blank_image_percent), k=1)[0]
     if replace:
         entry['image'] = blank_image_path
     return entry
 
-def load_syn_data(syn_mode, split='train', replace_with_blank_image_percent=10):
-    assert syn_mode in ['precise', 'informative', 'precise+informative']
-
+def load_syn_data(caption_path, precise_qa_path, informative_qa_path, blank_image_path, split='train', replace_with_blank_image_percent=10):
     merged_dict = {}
-    
-    load_caption(merged_dict)
-    load_precise_qa(merged_dict)
-    load_informative_qa(merged_dict)
-    # collect task_name
-    # load_precise_qa(merged_dict, task_name_only=True)
+    load_caption(merged_dict, caption_path=caption_path)
+    load_precise_qa(merged_dict, precise_qa_path=precise_qa_path)
+    load_informative_qa(merged_dict, informative_qa_path=informative_qa_path)
     idx = 0
     task_dict = defaultdict(list)
     for entry in merged_dict.values():
@@ -273,6 +266,7 @@ def load_syn_data(syn_mode, split='train', replace_with_blank_image_percent=10):
         random.Random(idx).shuffle(qa_pairs)
         for qa in qa_pairs:
             entry['conversations'] += [{"from": "human", "value": qa['Q']},{"from": "gpt","value": qa['A']}]
+        entry["image"] = os.path.basename(entry['image'])
         idx += 1
     task_num_dict = {k: len(v) for k, v in sorted(task_dict.items(), key=lambda item: len(item[1]), reverse=True)}
 
@@ -282,7 +276,7 @@ def load_syn_data(syn_mode, split='train', replace_with_blank_image_percent=10):
     for task, entry_list in task_dict.items():
         random.Random(42).shuffle(entry_list)
         if replace_with_blank_image_percent > 0:
-            entry_list = [replace_image_with_blank(id, entry, replace_with_blank_image_percent) for id, entry in enumerate(entry_list)]     
+            entry_list = [replace_image_with_blank(id, entry, replace_with_blank_image_percent, blank_image_path) for id, entry in enumerate(entry_list)]     
 
         train_list_dict += entry_list[:int(0.9 * len(entry_list))]
         dev_list_dict += entry_list[int(0.9 * len(entry_list)):]
