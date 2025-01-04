@@ -8,6 +8,13 @@ We investigate domain adaptation of MLLMs through post-training, focusing on dat
 **(3) Task Evaluation**: We conduct experiments in two domains, biomedicine and food, by post-training MLLMs of different sources and scales (e.g., Qwen2-VL-2B, LLaVA-v1.6-8B, Llama-3.2-11B), and then evaluating MLLM performance on various domain-specific tasks.
 
 
+*********************** *Updates* *************************
+- [2024/1/4] Updated **ALL** models, code and data to reproduce our results
+- [2024/1/3] Released the [post-training guide](docs/Post_Train.md)
+- [2024/12/16] Released the [data synthesis guide](docs/Synthesis.md)
+- [2024/12/13] Released the [evaluation guide](docs/Evaluation.md)
+- [2024/11/29] Released our paper
+
 ## Resouces
 #### Domain-Specific Training Data
 - [biomed-visual-instructions](https://huggingface.co/datasets/AdaptLLM/biomed-visual-instructions)
@@ -73,7 +80,7 @@ Install vLLM with `pip` or [from source](https://vllm.readthedocs.io/en/latest/g
 The steps in [Synthesis.md](docs/Synthesis.md) reproduce our visual instruction synthesizer and our synthetic data.
 
 ## Domain-Specific Single-Stage Post-Training
-The steps in [Post-train.md](docs/Post_train.md) reproduce our domain-adapted models. 
+The steps in [Post-Train.md](docs/Post_Train.md) reproduce our domain-adapted models. 
 
 ## Domain-Specific Task Evaluation
 
