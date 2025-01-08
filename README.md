@@ -15,7 +15,7 @@ We investigate domain adaptation of MLLMs through post-training, focusing on dat
 - [2024/12/13] Released the [evaluation guide](docs/Evaluation.md)
 - [2024/11/29] Released our paper
 
-## Resouces
+## Resources
 #### Domain-Specific Training Data
 - [biomed-visual-instructions](https://huggingface.co/datasets/AdaptLLM/biomed-visual-instructions)
 - [food-visual-instructions](https://huggingface.co/datasets/AdaptLLM/food-visual-instructions)
